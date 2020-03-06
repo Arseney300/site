@@ -1,0 +1,5 @@
+*.out
+info.txt
+test/*
+*.test
+*.log
