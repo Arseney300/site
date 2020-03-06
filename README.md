@@ -2,7 +2,7 @@
 ---
 ### DEPENDENCIES:
 
-    ```cppcms, cppdb, booster, mysql, gcc-8 and later, cmake, make, boost```
+```cppcms, cppdb, booster, mysql, gcc-8 and later, cmake, make, boost```
     
 ---
 ### INSTALLATION AND RUN
