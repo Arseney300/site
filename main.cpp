@@ -1,6 +1,12 @@
+/*
+ * @project site
+ * @file main.c
+ * @author Soundwave
+ * @date Mar 6, 2020
+ * @brief main site application
+ * */
 
-
-
+//cpp headers
 #include <string>
 #include <iostream>
 #include <vector>
@@ -9,15 +15,17 @@
 #include <fstream>
 #include <stdlib.h>
 #include <filesystem>
+//!cpp headers
 
-
-
+//boost headers
 #include <boost/any.hpp>
 #include <boost/assert.hpp>
 #include <boost/assign/std/vector.hpp>
 #include <boost/assign/std/map.hpp>
 #include <boost/algorithm/string.hpp>
 #include <boost/array.hpp>
+//!boost headers
+
 
 //cppcms headers
 #include <cppcms/application.h>
@@ -31,21 +39,33 @@
 #include <cppdb/frontend.h>
 //!cppcms headers
 
+//main class:
 class site_application: public cppcms::application{
 private:
-	//some praviate data
+	//some private data
 public:
 	site_application(cppcms::service &srv):
 		cppcms::application{srv}
 	{
+		//default page
 		dispatcher().assign("",&site_application::default_page,this);
 		dispatcher().assign("/",&site_application::default_page,this);
 		mapper().assign("");
+		//!default page
+		
+		//books page
+		dispatcher().assign("/books/(\\S+)", &site_application::books,this,1);
+		mapper().assign("books","/books");
+		//!books page
 
 	}
 
 	void default_page(){
 		response().out() << "default page";
+	}
+
+	void books(std::string arg){
+		response().out() << arg;
 	}
 
 

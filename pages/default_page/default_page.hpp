@@ -1,3 +1,12 @@
+/*
+ * @project site
+ * @file default_page.hpp
+ * @author Soundwave
+ * @date Mar 6, 2020
+ * @brief default page data
+ * */
+
+
 #ifndef default_page_h
 #define default_page_h
 #include <cppcms/view.h>
