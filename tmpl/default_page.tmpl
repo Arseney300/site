@@ -4,8 +4,81 @@
 <%template render()%>
 <!DOCTYPE html>
 <html lang="en">
-hello world
+<head>
+	<meta charset="UTF-8">
+	<title>arseney Mescheryakov</title>
+</head>
+<style>
+	body{
+		background: #ecf2ce;
+	}
+	li{
+		white-space: nowrap;
+	}
+	.header a{
+		margin-left: 30px;
+
+	}
+	.header a:link{text-decoration: none;}
+	.header a:visited{text-decoration: none;}
+	.header a:active{text-decoration: none;}
+	.header a:hover{text-decoration: underline; color: blue;}
+	.center{
+		text-align:center;
+
+	}
+	.left-block{
+		height: 100px;
+		width: 200px;
+		display: inline-block;
+		text-align: left;
+	}
+	.right-block{
+		height: auto;
+		width: 30vw;
+		display: inline-block;
+		text-align: justify;
+	}
+	.main_block{
+		margin-top: 20px;
+	}
+	.header{
+		margin-top: 4vh;
+	}
+	.left-block li{
+		margin-bottom: 5px;
+		list-style-type: none;
+	}
+</style>
+<body>
+	<div class="center header">
+		<a href="/" style="font-size: 20px">Arseney Mescheryakov</a>
+		<a href="/blog">Blog</a>	
+		<a href="/project">Projects</a>
+		<a href="/resume">Resume</a>
+		<a href="/books">Books</a>
+		<a href="/gam">Guides and Manuals</a>
+	</div>
+	<main>
+		<div class="main_block center">
+			<div class="left-block links">
+				<ul>
+					<li><a href="mailto: Arseney300@gmail.com">email</a></li>
+					<li><a href="https://github.com/Arseney300">github</a></li>
+					<li><a href="/resume">resume</a></li>
+					<li><a href="https://vk.com/ceh90000">vk</a></li>
+					<li><a href="xmpp:arseney@jabber.ru">jabber</a></li>
+				</ul>
+			</div>
+			<div class="right-block">
+				<p><%=text%></p>
+			</div>
+		</div>
+	</main>
+</body>
 </html>
+
+
 <%end template%>
 <%end view%>
 <%end skin%>
