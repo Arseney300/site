@@ -21,7 +21,7 @@ typedef std::array<std::string,3> blog_element;
 typedef std::vector<blog_element> blog_t;
 typedef cppcms::json::value json;
 
-#define json_address  "configs/blog.json"
+#define json_address  "configs/data.json"
 #define blog_address "data/blog/"
 namespace blog_page_content{
 

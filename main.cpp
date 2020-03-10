@@ -42,6 +42,7 @@
 //pages headers
 #include "pages/default_page/default_page.hpp"
 #include "pages/blog/blog.hpp"
+#include "pages/projects/projects.hpp"
 //!pages headers
 
 
@@ -114,10 +115,23 @@ public:
 
 	void add_blog(){
 		if(request().request_method() == "POST"){
-			
+			//nothing
 		}
 	}
 
+	void project(){
+		projects_page_content::content c;
+		render("projects_view_page",c);
+	}
+
+	void project(std::string project){
+		projects_page_content::content2 c{project};
+		render("projects_view_page_2",c);
+	}
+
+
+	void add_project_page(){}
+	void add_project(){}
 
 
 	void books(){
@@ -127,12 +141,8 @@ public:
 	void books(std::string str){
 		//nothing
 	}
-	void project(){
 
-	}
-	void project(std::string str){}
-	void add_project_page(){}
-	void add_project(){}
+
 
 
 };
